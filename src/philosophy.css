@@ -1,0 +1,256 @@
+.philosophy-page {
+  background-color: var(--bg-color); /* Light Pink/Beige */
+  color: var(--text-dark);
+}
+
+.phil-header {
+  padding: 4rem 4rem 10rem 4rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.phil-header::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -100px;
+  width: 50%;
+  height: 100%;
+  background: url('./assets/fluidity_wave.png') no-repeat;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15;
+  z-index: 0;
+  -webkit-mask-image: linear-gradient(to right, transparent, black);
+  mask-image: linear-gradient(to right, transparent, black);
+}
+
+.phil-header-content {
+  position: relative;
+  z-index: 1;
+  max-width: 600px;
+}
+
+.phil-subtitle {
+  font-size: 0.75rem;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: rgba(90, 43, 48, 0.6);
+}
+
+.phil-title {
+  font-family: var(--font-heading);
+  font-size: 4.8rem;
+  line-height: 1.1;
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+
+.phil-quote {
+  font-size: 1.3rem;
+  font-style: italic;
+  font-family: var(--font-heading);
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+.phil-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+  padding: 6rem 4rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.phil-section.dark {
+  background-color: var(--primary);
+  color: white;
+  max-width: none;
+  padding: 8rem 0;
+}
+.phil-section.dark .phil-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 4rem;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  width: 100%;
+}
+
+.phil-text-col, .phil-img-col {
+  flex: 1;
+}
+
+.phil-num {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+.phil-section.dark .phil-num {
+  color: white;
+}
+
+.phil-body {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+}
+
+.drop-cap-wrap {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+.drop-cap {
+  font-family: var(--font-heading);
+  font-size: 5rem;
+  line-height: 0.8;
+  color: var(--primary);
+  margin-top: 5px;
+}
+
+.block-quote {
+  border-left: 3px solid var(--primary);
+  padding: 1.5rem 2.5rem;
+  font-style: italic;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  background-color: white;
+  margin-top: 3rem;
+  color: var(--primary);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+}
+
+.phil-img {
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  object-fit: cover;
+}
+
+.fluidity-cards {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+.f-card {
+  background-color: #ede2db;
+  padding: 2rem 1.5rem;
+  border-radius: var(--border-radius);
+  flex: 1;
+}
+.f-card h4 {
+  font-size: 0.9rem;
+  margin-bottom: 0.8rem;
+  color: var(--primary);
+  font-weight: 600;
+}
+.f-card p {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  line-height: 1.6;
+}
+
+.stacked-imgs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.stacked-imgs img:nth-child(1) {
+  width: 100%;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.stacked-imgs img:nth-child(2) {
+  width: 65%;
+  margin-top: -80px;
+  border-radius: var(--border-radius);
+  border: 12px solid var(--bg-color);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.cta-section {
+  display: flex;
+  justify-content: center;
+  padding: 8rem 4rem 4rem 4rem;
+}
+.cta-box {
+  background-color: #ede2db;
+  padding: 5rem 6rem;
+  border-radius: var(--border-radius);
+  text-align: center;
+  max-width: 800px;
+  position: relative;
+  overflow: hidden;
+}
+.cta-watermark {
+  position: absolute;
+  font-family: var(--font-heading);
+  font-size: 14rem;
+  color: white;
+  opacity: 0.3;
+  z-index: 0;
+  pointer-events: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-title {
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary);
+}
+.cta-desc {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-bottom: 3rem;
+  line-height: 1.6;
+}
+.cta-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+.btn-outline {
+  background-color: transparent;
+  border: 1px solid rgba(90, 43, 48, 0.4);
+  color: var(--primary);
+  padding: 0.8rem 1.5rem;
+  font-size: 0.8rem;
+  font-family: var(--font-body);
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: var(--transition);
+}
+.btn-outline:hover {
+  background-color: rgba(90, 43, 48, 0.08);
+}
+
+@media (max-width: 1024px) {
+  .phil-section { flex-direction: column; gap: 3rem; }
+  .phil-section.dark .phil-inner { flex-direction: column; gap: 3rem; }
+  .phil-header::after { display: none; }
+  .phil-title { font-size: 3.5rem; }
+  .fluidity-cards { flex-direction: column; }
+  .drop-cap { font-size: 4rem; }
+  .stacked-imgs img:nth-child(2) { width: 80%; }
+}

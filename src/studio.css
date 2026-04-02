@@ -1,0 +1,292 @@
+/* src/studio.css */
+.studio-page {
+  background-color: var(--bg-color); /* Light Pink/Beige */
+  color: var(--text-dark);
+}
+
+.studio-header {
+  padding: 6rem 4rem 4rem 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.st-title-area {
+  max-width: 500px;
+}
+
+.st-subtitle {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: rgba(90, 43, 48, 0.6);
+}
+
+.st-title {
+  font-family: var(--font-heading);
+  font-size: 4.2rem;
+  line-height: 1;
+  color: var(--primary);
+}
+
+.st-title i {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.st-intro {
+  max-width: 400px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+}
+
+/* Gallery Grid */
+.studio-gallery {
+  padding: 0 4rem 6rem 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 250px 250px 250px;
+  gap: 1rem;
+}
+
+.gal-item {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.gal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gal-item:hover .gal-img {
+  transform: scale(1.03);
+}
+
+/* Masonry placements */
+.gal-main {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+
+.gal-top-right {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+
+.gal-bot-right {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+
+.gal-bot-left {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+
+.gal-bot-mid-right {
+  grid-column: 2 / 4;
+  grid-row: 3 / 4;
+}
+
+/* Gallery Overlays */
+.gal-overlay-bot {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 1.5rem;
+  color: white;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  width: 100%;
+}
+.gal-quote {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-style: italic;
+}
+.gal-text-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2rem 2.5rem;
+}
+.gal-o-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 0.3rem;
+}
+.gal-o-desc {
+  font-size: 0.65rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: rgba(90, 43, 48, 0.7);
+  font-weight: 500;
+}
+.gal-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--primary);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.65rem;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Architecture Section */
+.arch-section {
+  padding: 6rem 4rem;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  gap: 8rem;
+  align-items: center;
+}
+
+.arch-img-col {
+  flex: 1;
+  position: relative;
+}
+
+.arch-img {
+  width: 100%;
+  height: 700px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+}
+
+.arch-floating-block {
+  position: absolute;
+  bottom: -40px;
+  right: -50px;
+  background-color: var(--primary);
+  color: white;
+  padding: 3rem 2.5rem;
+  border-radius: var(--border-radius);
+  max-width: 320px;
+  box-shadow: 0 10px 30px rgba(90,43,48,0.2);
+}
+.arch-f-icon {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.arch-f-text {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.arch-text-col {
+  flex: 1;
+}
+
+.arch-title {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  color: var(--text-dark);
+  margin-bottom: 3rem;
+  line-height: 1;
+}
+.arch-title i {
+  color: var(--primary);
+  font-style: italic;
+}
+
+.arch-feature {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+.arch-feat-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  background-color: #f7c7c9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  color: var(--primary);
+  opacity: 0.8;
+}
+.arch-feat-title {
+  font-size: 0.8rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--primary);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-top: 5px;
+}
+.arch-feat-desc {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+/* CTA Section */
+.s-cta-section {
+  background-color: var(--primary);
+  color: white;
+  padding: 8rem 4rem;
+  text-align: center;
+}
+
+.s-cta-title {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.s-cta-desc {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin-bottom: 3rem;
+}
+
+.s-cta-btns {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.btn-white {
+  background-color: white;
+  color: var(--primary);
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: var(--transition);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.btn-white:hover {
+  background-color: #f0f0f0;
+}
+
+@media (max-width: 1024px) {
+  .studio-header { flex-direction: column; align-items: flex-start; gap: 2rem; }
+  .studio-gallery { grid-template-columns: 1fr; grid-template-rows: auto; }
+  .gal-item { grid-column: span 1 !important; grid-row: span 1 !important; height: 300px; }
+  .arch-section { flex-direction: column; gap: 6rem; }
+  .arch-floating-block { right: 50%; transform: translateX(50%); width: 80%; }
+}
